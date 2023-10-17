@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import {
   // Task 7: Import the `removePhoto()` action creator from the photos slice
-  selectAllPhotos, removePhoto, selectFilteredPhotos
+  removePhoto, selectFilteredPhotos
   // Task 13: Import the `selectFilteredPhotos()` selector from the photos slice
 } from '../photos.slice';
 import './list.css';
@@ -18,7 +18,7 @@ export default function PhotosList() {
   }
 
   const photosListItems = photos.map(({ id, caption, imageUrl }) => (
-    <li key={id}>
+    <li key={`list-${id}`}>
       <img alt={caption} src={imageUrl} />
       <div>
         <p>{caption}</p>

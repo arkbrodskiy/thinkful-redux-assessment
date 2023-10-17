@@ -7,7 +7,9 @@ export const fetchSuggestion =
       async () => {
           try {
               const response = await fetch('http://localhost:3004/api/suggestion')
-              if (!response.ok) throw new Error('Failed to fetch suggestion')
+              /*if (!response.ok) {
+                  throw new Error('Failed to fetch suggestion')
+              }*/
               const responseJson = await response.json()
               return responseJson.data
           } catch (err) {
