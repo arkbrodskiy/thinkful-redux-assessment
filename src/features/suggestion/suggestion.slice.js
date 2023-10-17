@@ -38,7 +38,7 @@ const options = {
           ...state,
           suggestion: '',
           loading: false,
-          error: action.payload
+          error: true
       }))
       builder.addCase(fetchSuggestion.fulfilled, (state, action) => ({
           ...state,
